@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+    /* background-color: beige; */
+}
+ 
+#title {
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: black;
+    font-size: 2rem;
+}
+
+#title:hover {
+    text-decoration: underline;
+} 
+
+#date {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: "Inter", sans-serif;
+}
+
+#day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: darkgrey;    
+}
+
+#num {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+#month {
+    font-size: 1.5rem; 
+    font-weight: 700;
+}
