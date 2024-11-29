@@ -1,3 +1,7 @@
+:root {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +14,13 @@ a {
 .main {
     margin: 0px auto;
     width: 100%;
-    max-width: 50%;
+    max-width: 50%; 
     height: auto;
     border-radius: 10px;
     padding: 2rem 2rem;
     /* background-color: beige; */
 }
- 
+
 #title {
     padding: 0;
     font-family: "Inter", sans-serif;
@@ -27,18 +31,29 @@ a {
 
 #title:hover {
     text-decoration: underline;
-} 
+}
 
+#top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+ 
 #date {
+    flex: 0 0 auto;
+    max-width: 10%;
+    width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    text-align: center;
+    vertical-align: middle;
     font-family: "Inter", sans-serif;
 }
 
 #day {
     font-size: 1.5rem;
     font-weight: 700;
-    color: darkgrey;    
+    color: darkgrey;  
 }
 
 #num {
@@ -49,4 +64,241 @@ a {
 #month {
     font-size: 1.5rem; 
     font-weight: 700;
+}
+
+#input {
+    flex: 1 1 auto;
+    margin: auto;
+    padding: 20px;
+    max-width: 90%;
+    width: 100%;
+    height: 3rem;
+}
+
+#input {
+    display: flex;
+}
+
+#input input {
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    width: 90%;
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: ghostwhite;
+}
+
+#input input:focus {
+    border: none;
+    outline: none;
+}
+
+#input button {
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    width: 10%;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    background-color: rgb(160, 158, 158);
+}
+
+#input button:hover {
+    transition-duration: 0.2s;
+    background-color: gainsboro;
+}
+
+#list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+#mark-container {
+    align-items: center;
+}
+
+#mark {
+    position: relative;
+}
+
+#mark label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+}
+  
+#mark label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+}
+  
+#mark input[type="checkbox"] {
+    visibility: hidden;
+}
+  
+#mark input[type="checkbox"]:checked + label {
+    background-color: #000000;
+    border-color: #000000;
+}
+  
+#mark input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+#mark-content {
+    width: 100%;
+    padding-left: 3rem;
+}
+
+#mark-content p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
+
+#list.completed #mark-content p {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+#delete-icon {
+    margin-left: auto;
+}
+
+
+/* Add these media queries to your existing style.css */
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 1024px) {
+    .main {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    #top {
+        flex-direction: column;
+    }
+
+    #date {
+        width: 100%;
+        margin: auto;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    #input {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #input input {
+        width: 85%;
+    }
+
+    #input button {
+        width: 15%;
+    }
+
+    #list {
+        padding: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #mark-container {
+        flex: 0 0 auto;
+        margin-right: 1rem;
+    }
+
+    #mark-content {
+        flex: 1 1 auto;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+    .main {
+        max-width: 100%;
+        padding: 0.5rem;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #top {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    #date {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    #day, #num, #month {
+        margin: 0.25rem 0;
+    }
+
+    #input {
+        flex-direction: column;
+    }
+
+    #input input {
+        width: 100%;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #input button {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    #list {
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    #mark_container {
+       
+    }
+
+    #mark-content p {
+        font-size: 1rem;
+    }
+
+    #delete-icon {
+        align-self: flex-end;
+    }
 }

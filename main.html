@@ -2,10 +2,13 @@
 <html lang="en-US">
 
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simple To-Do App</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+        <script src="date.js"></script>
     </head>
 
     <body>
@@ -16,16 +19,39 @@
                 To-Do App
             </a>
 
-            <div id="date">
+            <div id="top">
+                <div id="date">
 
-                <p id="day">FRI</p>
-                <p id="num">15</p>
-                <p id="month">NOV</p>
+                    <p id="day">FRI</p>
+                    <p id="num">15</p>
+                    <p id="month">NOV</p>
+    
+                </div>
+                <div id="input">
+                    <input type="text" id="add-to-do" placeholder="lorem ipsum dolor sit amet">
+                    <button id="add-button" type="button">+</button>
+                </div>
 
             </div>
            
-            <div class="main-action">   
-            </div>
+            <!-- <div id="list">   
+                <div id="mark_container">
+                    <div id="mark">
+                        <input type="checkbox" id="checkbox_id">
+                        <label for="checkbox_id"></label>
+                    </div>
+                </div>
+                <div id="content-container">
+                    <div id="mark-content">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div id="delete-icon">
+                    <a href="#">
+                        <img src="assets/trash-bin.png" alt="">
+                    </a>
+                </div>
+            </div> -->
 
         </div>
         
